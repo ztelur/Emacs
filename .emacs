@@ -34,3 +34,12 @@
 (put 'upcase-region 'disabled nil)
 ;;org-mode setting
 (setq org-startup-indented t)
+
+;;set the org-mode
+(setq org-log-done 'time)
+(setq org-log-done 'note)
+;;当所有的子todo做完后，总的todo也标记为done
+(defun org-summary-todo (n-done n-not-done)
+  "Swith entry to DONE when all subentries are done, to TODO otherwise."
+  (let (org-log-done org-log-states)   ; turn off logging.
+    (org-todo (if (= n-not-done 0) "DONE" "TODO"))))

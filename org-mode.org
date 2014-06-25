@@ -1,0 +1,23 @@
+#+TITLE every day org-mode
+#+AUTHOUR randy
+#+DATE 2013
+
+* DONE [#A] study harder                                               :test:
+CLOSED: [2014-06-25 周三 23:06]
+- CLOSING NOTE [2014-06-25 周三 23:06] \\
+  加油
+** TODO set a schedule   <2000-09-12 15:00>
+** TODO just do it    
+* make a better life
+DEADLINE: <2014-06-27 周五> SCHEDULED: <2014-06-26 周四>
+
+- CLOSING NOTE [2014-06-25 周三 22:58] \\
+  这次不错
+** DONE risk early                                                   :early:
+CLOSED: [2014-06-25 周三 22:59]
+- CLOSING NOTE [2014-06-25 周三 22:59] \\
+  加油
+** TODO sleep early
+* just for test
+** TODO do it 
+DEADLINE: <2014-06-26 周四> SCHEDULED: <2014-06-25 周三>
