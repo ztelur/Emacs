@@ -26,16 +26,24 @@
 (global-linum-mode t)
 ;;不生成临时文件
 (setq-default make-backup-files nil)
+;;====================================================================
 ;;emacs 改变光标形状
-;;========================================
+;;=====================================================================
 
 ;; 设置光标为竖线 
 (setq-default cursor-type 'bar)
 (put 'upcase-region 'disabled nil)
 ;;org-mode setting
 (setq org-startup-indented t)
+;;当指针到一个括号时，自动显示所匹配的另一个括号  
+(show-paren-mode t)  
+;;括号匹配时可以高亮显示另外一边的括号，但光标不会烦人的跳到另一个括号处  
+(setq show-paren-style 'parenthesis) ;;好像也没太大作用
 
+
+;;======================================================================
 ;;set the org-mode
+;;======================================================================
 (setq org-log-done 'time)
 (setq org-log-done 'note)
 ;;当所有的子todo做完后，总的todo也标记为done
@@ -43,3 +51,13 @@
   "Swith entry to DONE when all subentries are done, to TODO otherwise."
   (let (org-log-done org-log-states)   ; turn off logging.
     (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+
+;;
+
+(add-to-list 'load-path "~/.emacs.d")
+;;set 自动完成auto-complete  2014.6.26
+(add-to-list 'load-path "~/.emacs.d/auto-complete")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
+(ac-config-default)
+
